@@ -6,7 +6,8 @@ const BurgerStack = (props) => {
     return (
     <>
     <ul>
-        {props.stack.map((ingredient, index) => (
+        {props.stack.length === 0 ? <li>No Ingredients</li> :
+        props.stack.map((ingredient, index) => (
             <li key={index}>
                 <div style={{backgroundColor: ingredient.color}}>
                     {ingredient.name}
